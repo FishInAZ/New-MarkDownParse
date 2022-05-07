@@ -20,12 +20,12 @@ public class MarkdownParseTest {
     public void getLinks(){
 
         try{        
-            Path file = Path.of("test-markdown.md");
+            Path file = Path.of("test-file.md");
             String content = Files.readString(file);
             ArrayList<String> links = MarkdownParse.getLinks(content);
 
             String link = "https://something.com";
-            String link2 = "some-page.html";
+            String link2 = "some-thing.html";
 
             assertEquals(List.of(link,link2), links);
         }
